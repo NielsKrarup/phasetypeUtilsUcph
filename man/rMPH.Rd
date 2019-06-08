@@ -9,9 +9,6 @@ rMPH(n, SubIntMat, Phi0, RewardMat)
 \arguments{
 \item{RewardMat}{}
 }
-\value{
-
-}
 \description{
 Simulates n-outcomes of the mph-class
 }
