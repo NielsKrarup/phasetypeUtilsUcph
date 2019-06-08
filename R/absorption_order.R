@@ -97,8 +97,8 @@ AbsOrderPH <- function(listS, listAlpha){
       #Simply Max order stat of n = 2 Phase-types S1, S2
       knOrderPH(listAlpha = listAlpha[MatListIndex], listS = listS[MatListIndex], k = 2)$T_kn
     } else {
-      bdiag(Reduce(f = sumKronecker, x = listS[MatListIndex]),
-            Reduce(f = bdiag, x = apply(X = as.matrix(combn(x = MatListIndex, m = n-1)), MARGIN = 2,
+      Matrix::bdiag(Reduce(f = sumKronecker, x = listS[MatListIndex]),
+            Reduce(f = Matrix::bdiag, x = apply(X = as.matrix(combn(x = MatListIndex, m = n-1)), MARGIN = 2,
                                         FUN = function(b) BlockGenerator(MatListIndex = b, listS = listS,listAlpha = listAlpha))) )
     }
   }

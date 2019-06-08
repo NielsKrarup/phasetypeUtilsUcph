@@ -14,8 +14,8 @@
 #' @examples
 #' MCMC_PH(pi = listAlpha[[4]], SubInt = listS[[4]], N = 1e4, BurnIn = 1e2, TimePoint = 0.8, OFun = OtimeSpent, State = 5)
 MCMC_PH <-
-  function(pi = ErInt,
-           SubIntMat = ErMat,
+  function(pi = listAlpha[[4]],
+           SubIntMat = listS[[4]],
            N = 1e2,
            BurnIn = NULL,
            TimePoint = 0.8,
