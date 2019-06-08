@@ -16,6 +16,7 @@ Imports:
     Matrix,
     ArgumentCheck
 Suggests: 
-    spelling
+    spelling,
+    testthat
 Language: en-GB
 Roxygen: list(markdown = TRUE)
