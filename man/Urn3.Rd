@@ -7,7 +7,7 @@
 Urn3(n, d, k)
 }
 \arguments{
-\item{n}{total number of balls in urn total}
+\item{n}{total number of balls in urn}
 
 \item{d}{number of black balls in urn}
 
@@ -15,4 +15,8 @@ Urn3(n, d, k)
 }
 \description{
 Urn Example 3
+}
+\examples{
+
+Urn3(100, 25, 10)
 }

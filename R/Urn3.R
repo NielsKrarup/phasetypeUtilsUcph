@@ -1,6 +1,6 @@
 #' Urn Example 3
 #'
-#' @param n total number of balls in urn total
+#' @param n total number of balls in urn
 #' @param d number of black balls in urn
 #' @param k k'th black ball
 #'
@@ -8,6 +8,8 @@
 #' @export
 #'
 #' @examples
+#'
+#' Urn3(100, 25, 10)
 Urn3 <- function(n, d, k){
   #* Establish a new 'ArgCheck' object
   Check <- ArgumentCheck::newArgCheck()
