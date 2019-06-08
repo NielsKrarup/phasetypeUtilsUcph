@@ -1,5 +1,4 @@
-
-# Test Matrices -----------------------------------------------------------
+#' @export
 listS <- list(
 
   S1 = matrix(c(-10, 2, 3,
@@ -31,6 +30,7 @@ listS <- list(
                 3,-6,1,
                 3,1,-7), byrow = T, ncol = 3))
 
+#' @export
 listAlpha <- list(
   pi1 = c(1,4,5)/10,
   pi2 = c(1,1,1,1)/4,
@@ -40,8 +40,3 @@ listAlpha <- list(
   pi6 = c(2,3,5)/10)
 
 
-# listAlpha = list(pi1,pi2,pi3,pi4,pi5,pi6)
-# listS = list(S1,S2,S3,S4,S5,S6)
-
-# listStmp = list(S3,S1,S2,S4)
-# listAtmp = list(pi3,pi1,pi2,pi4)
