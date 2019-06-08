@@ -1,6 +1,6 @@
 Package: phasetypeUtilsUcph
 Title: Phase-type Distribution Helpers
-Version: 0.0.0.9001
+Version: 0.6.0
 Authors@R: 
     person(given = "Niels",
            family = "Krarup",
