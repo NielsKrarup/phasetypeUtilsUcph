@@ -40,7 +40,7 @@ knOrderPH <- function(listAlpha, listS, k) {
   }
 
 
-  #Vector of dimensions of each PH
+  #Vector of dimensions of each Phase-type
   pvec <- sapply(listAlpha, length)
   #Dimension of knOrder
   dimkn <-
