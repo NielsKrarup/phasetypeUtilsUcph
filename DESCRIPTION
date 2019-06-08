@@ -15,3 +15,7 @@ RoxygenNote: 6.1.1
 Imports: 
     Matrix,
     ArgumentCheck
+Suggests: 
+    spelling
+Language: en-GB
+Roxygen: list(markdown = TRUE)
