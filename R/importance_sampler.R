@@ -42,11 +42,11 @@ ImpSampler <-
     sample <- unlist(lapply(
       X = tmplist,
       FUN = function(x) {
-        -rowSums(x$SubIntMat)[tail(x$states, 1)] * OFun(obj = x, ...)
+        -Matrix::rowSums(x$SubIntMat)[tail(x$states, 1)] * OFun(obj = x, ...)
       }
-    )) * rowSums(pi %*% Matrix::expm(SubIntMat * TimePoint)) /
+    )) * Matrix::rowSums(pi %*% Matrix::expm(SubIntMat * TimePoint)) /
       as.numeric(pi %*% Matrix::expm(SubIntMat *
-                               TimePoint) %*% (-rowSums(SubIntMat)))
+                               TimePoint) %*% (-Matrix::rowSums(SubIntMat)))
 
 
     return(list(
