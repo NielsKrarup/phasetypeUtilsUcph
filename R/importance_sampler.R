@@ -52,7 +52,8 @@ ImpSampler <-
     return(list(
       N = N,
       sample_mean = mean(sample),
-      sample_var = var(sample)
+      sample_var = var(sample),
+      sample_sd = sd(sample)
     ))
   }
 
