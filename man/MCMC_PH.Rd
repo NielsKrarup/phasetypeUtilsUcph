@@ -4,8 +4,8 @@
 \alias{MCMC_PH}
 \title{Markov Chain Monte Carlo Estimator of functional of underlying Markov jump process underlying a Phase-type distribution conditioned on the absorption time being equal to x = TimePoint.}
 \usage{
-MCMC_PH(pi = listAlpha[[4]], SubIntMat = listS[[4]], N = 100,
-  BurnIn = NULL, TimePoint = 0.8, OFun = OtimeSpent, ...)
+MCMC_PH(pi = ErInt, SubIntMat = ErMat, N = 100, BurnIn = NULL,
+  ForcePosExitRateStart = F, TimePoint = 0.8, OFun = OtimeSpent, ...)
 }
 \arguments{
 \item{pi}{The initial distribution of the underlying Markov jump process.}
@@ -15,6 +15,8 @@ MCMC_PH(pi = listAlpha[[4]], SubIntMat = listS[[4]], N = 100,
 \item{N}{Number of steps in the MCMC algorithm.}
 
 \item{BurnIn}{Burn In.}
+
+\item{ForcePosExitRateStart}{Logical, should the first chain be forced to have positive exit rate at end state? Default is FALSE.}
 
 \item{TimePoint}{Time of absorption conditioned on.}
 

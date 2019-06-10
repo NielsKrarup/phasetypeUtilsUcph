@@ -11,6 +11,9 @@ DPHSubSeqGen(pvec = c(0.8, 0.2), k_sub_seq = c(1, 1, 2, 2))
 
 \item{k_sub_seq}{sequence to be implemented as DPH. Must start with 1 and increment by one for each new unique outcome.}
 }
+\value{
+Initial vector and sub-transition matrix of the discrete phase-type distribution of the first occurrence.
+}
 \description{
 Discrete Phase-type representation for first occurrence of k-sub sequence.
 }

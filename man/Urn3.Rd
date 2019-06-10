@@ -2,7 +2,7 @@
 % Please edit documentation in R/Urn3.R
 \name{Urn3}
 \alias{Urn3}
-\title{Urn Example 3}
+\title{Discrete phase-type representation of Urn experiment as given in Example 3.18}
 \usage{
 Urn3(n, d, k)
 }
@@ -13,8 +13,11 @@ Urn3(n, d, k)
 
 \item{k}{k'th black ball}
 }
+\value{
+Phase type representation (\code{pi_kn} , \code{T_kn}) as a list.
+}
 \description{
-Urn Example 3
+Discrete phase-type representation of Urn experiment as given in Example 3.18
 }
 \examples{
 
