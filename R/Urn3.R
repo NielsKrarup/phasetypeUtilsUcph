@@ -1,10 +1,10 @@
-#' Urn Example 3
+#' Discrete phase-type representation of Urn experiment as given in Example 3.18
 #'
 #' @param n total number of balls in urn
 #' @param d number of black balls in urn
 #' @param k k'th black ball
 #'
-#' @return
+#' @return Phase type representation (`pi_kn` , `T_kn`) as a list.
 #' @export
 #'
 #' @examples

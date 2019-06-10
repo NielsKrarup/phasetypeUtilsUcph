@@ -3,7 +3,7 @@
 #' @param pvec probability vector of unique outcomes
 #' @param k_sub_seq sequence to be implemented as DPH. Must start with 1 and increment by one for each new unique outcome.
 #'
-#' @return
+#' @return Initial vector and sub-transition matrix of the discrete phase-type distribution of the first occurrence.
 #' @export
 #'
 #' @examples
