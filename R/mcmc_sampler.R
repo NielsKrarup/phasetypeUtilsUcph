@@ -1,4 +1,7 @@
-#' Markov Chain Monte Carlo Estimator of functional of underlying Markov jump process underlying a Phase-type distribution conditioned on the absorption time being equal to x = TimePoint.
+#' MCMC
+#'
+#' Markov Chain Monte Carlo Estimator of functional of underlying Markov jump process underlying a Phase-type distribution
+#' conditioned on the absorption time being equal to x = TimePoint.
 #'
 #' @param pi The initial distribution of the underlying Markov jump process.
 #' @param SubIntMat The sub-intensity matrix of the underlying Markov jump process.
@@ -20,8 +23,8 @@ MCMC_PH <- function(pi = ErInt, SubIntMat = ErMat, N = 1e2, BurnIn = NULL, Force
   Zn <- list()
   Zn[[1]] <- RejMJP(IntDist = pi, SubIntMat = SubIntMat, TimePoint = TimePoint)
 
-  #ForcePosExitRate cnd
-  if(ForcePosExitRate  == TRUE){
+  #ForcePosExitRateStart cnd
+  if(ForcePosExitRateStart  == TRUE){
     itr <- 1
     while( -Matrix::rowSums(Zn[[1]]$SubIntMat)[tail(Zn[[1]]$states,1) ] == 0 ){
       Zn[[1]] <- RejMJP(IntDist = pi, SubIntMat = SubIntMat, TimePoint = TimePoint)
