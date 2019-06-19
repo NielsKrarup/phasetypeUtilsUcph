@@ -75,8 +75,6 @@ OtotalNrJumps <- function(obj) {
   totalNumbJumps
 }
 
-
-
 #' Functional of Markov jump process
 #'
 #' Use for estimating conditional cdf given absorption time.
