@@ -15,5 +15,10 @@ DPHSubSeqGen(pvec = c(0.8, 0.2), k_sub_seq = c(1, 1, 2, 2))
 Initial vector and sub-transition matrix of the discrete phase-type distribution of the first occurrence.
 }
 \description{
-Discrete Phase-type representation for first occurrence of k-sub sequence.
+\code{DPHSubSeqGen} must have the sub-sequence supplied in the following way: Start with a 1, then for every new unique value increment by one
+otherwise repeat the value.
+}
+\examples{
+##For the first occurrence of the sequence (10,9,8,8,9,10) of iid Pois(7) random variables.
+DPHSubSeqGen(pvec = dpois(c(10,9,8), lambda = 7), k_sub_seq = c(1,2,3,3,2,1))
 }

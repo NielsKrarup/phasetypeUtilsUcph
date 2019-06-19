@@ -7,8 +7,16 @@
 sumKronecker(A, B)
 }
 \arguments{
-\item{B}{}
+\item{A}{Square matrix.}
+
+\item{B}{Square matrix.}
+}
+\value{
+The Kronecker Sum between matrices A and B.
 }
 \description{
 Kronecker SUM
+}
+\examples{
+sumKronecker(listS[[1]], listS[[2]])
 }

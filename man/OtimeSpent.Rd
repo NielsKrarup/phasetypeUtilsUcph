@@ -4,7 +4,7 @@
 \alias{OtimeSpent}
 \alias{Ojumpsij}
 \alias{OtotalNrJumps}
-\title{O-functions
+\title{O-functional
 Time spent in state \code{i}}
 \usage{
 OtimeSpent(obj, State)
@@ -14,21 +14,23 @@ Ojumpsij(obj, i = 1, j = 2)
 OtotalNrJumps(obj)
 }
 \arguments{
+\item{obj}{Markov jump process object with state and jump sequence and intensity matrix.}
+
+\item{State}{State in the state space of the Markov jump process.}
+
+\item{i}{State in the state space of the Markov jump process.}
+
+\item{j}{State in the state space of the Markov jump process.}
+
 \item{obj}{A Markov jump process object with state and jump sequence and intensity matrix.}
 
-\item{State}{}
-
-\item{i}{A state in the state space of the Markov jump process.}
-
-\item{j}{A state in the state space of the Markov jump process.}
-
-\item{obj}{}
+\item{obj}{Markov jump process object with state and jump sequence and intensity matrix.}
 }
 \value{
 The total number of jump from state \code{i} to \code{j} of the Markov jump process given by \code{obj}.
 }
 \description{
-O-functions
+O-functional
 Time spent in state \code{i}
 }
 \section{Functions}{

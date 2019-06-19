@@ -2,7 +2,7 @@
 % Please edit documentation in R/mcmc_sampler.R
 \name{MCMC_PH}
 \alias{MCMC_PH}
-\title{Markov Chain Monte Carlo Estimator of functional of underlying Markov jump process underlying a Phase-type distribution conditioned on the absorption time being equal to x = TimePoint.}
+\title{MCMC}
 \usage{
 MCMC_PH(pi = ErInt, SubIntMat = ErMat, N = 100, BurnIn = NULL,
   ForcePosExitRateStart = F, TimePoint = 0.8, OFun = OtimeSpent, ...)
@@ -22,13 +22,14 @@ MCMC_PH(pi = ErInt, SubIntMat = ErMat, N = 100, BurnIn = NULL,
 
 \item{OFun}{The functional of the underlying process.}
 
-\item{...}{}
+\item{...}{additional arguments to be passed on to OFun.}
 }
 \value{
 Estimated mean of function \code{Ofun} applied to the underlying process.
 }
 \description{
-Markov Chain Monte Carlo Estimator of functional of underlying Markov jump process underlying a Phase-type distribution conditioned on the absorption time being equal to x = TimePoint.
+Markov Chain Monte Carlo Estimator of functional of underlying Markov jump process underlying a Phase-type distribution
+conditioned on the absorption time being equal to x = TimePoint.
 }
 \examples{
 MCMC_PH(pi = listAlpha[[4]], SubInt = listS[[4]], N = 1e4, BurnIn = 1e2, TimePoint = 0.8, OFun = OtimeSpent, State = 5)

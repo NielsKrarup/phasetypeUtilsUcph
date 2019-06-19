@@ -4,9 +4,9 @@
 \name{phasetypeUtilsUcph-package}
 \alias{phasetypeUtilsUcph}
 \alias{phasetypeUtilsUcph-package}
-\title{phasetypeUtilsUcph: Phase-type Distribution Helpers}
+\title{phasetypeUtilsUcph: Phase-type Distribution Utilities}
 \description{
-Utility functions for phase-type distributions.
+Utility functions for phase-type distributions and implementations of theorems in author's thesis.
 }
 \author{
 \strong{Maintainer}: Niels Krarup \email{krarup.niels@gmail.com} (YOUR-ORCID-ID)
