@@ -40,13 +40,13 @@ dimOrderStat <- function(k, n, pvec) {
 
 #' Kronecker SUM
 #'
-#' @param A
-#' @param B
+#' @param A Square matrix.
+#' @param B Square matrix.
 #'
-#' @return
+#' @return The Kronecker Sum between matrices A and B.
 #' @export
 #'
-#' @examples
+#' @examples sumKronecker(listS[[1]], listS[[2]])
 sumKronecker <- function(A, B) {
   if (dim(A)[1] != dim(A)[2] |
       dim(B)[1] != dim(B)[2])

@@ -1,8 +1,8 @@
-#'  O-functions
+#'  O-functional
 #' Time spent in state `i`
 #'
-#' @param obj A Markov jump process object with state and jump sequence and intensity matrix.
-#' @param State
+#' @param obj Markov jump process object with state and jump sequence and intensity matrix.
+#' @param State State in the state space of the Markov jump process.
 #'
 #' @return
 #' @export
@@ -27,9 +27,9 @@ OtimeSpent <- function(obj, State) {
 #'
 #' @note Note last state in `RejMJP` is not an actual jump
 #'
-#' @param obj
-#' @param i A state in the state space of the Markov jump process.
-#' @param j A state in the state space of the Markov jump process.
+#' @param obj A Markov jump process object with state and jump sequence and intensity matrix.
+#' @param i State in the state space of the Markov jump process.
+#' @param j State in the state space of the Markov jump process.
 #'
 #' @return The total number of jump from state `i` to `j` of the Markov jump process given by `obj`.
 #' @export
@@ -59,7 +59,7 @@ Ojumpsij <- function(obj, i = 1, j = 2) {
 #'
 #' @note Note last state in `RejMJP` is not an actual jump and first state is not a jump either
 #'
-#' @param obj
+#' @param obj Markov jump process object with state and jump sequence and intensity matrix.
 #'
 #' @return
 #' @export
@@ -74,3 +74,25 @@ OtotalNrJumps <- function(obj) {
 
   totalNumbJumps
 }
+
+
+
+#' Functional of Markov jump process
+#'
+#' Use for estimating conditional cdf given absorption time.
+#'
+#' @param obj Markov jump process object with state and jump sequence and intensity matrix.
+#' @param State State in the state space of the Markov jump process.
+#' @param y
+#'
+#' @return 1 if the time spent in state `State` is less than or equal to `y` 0 else.
+#' @export
+#'
+#' @examples
+#' (a <- simPH(SubIntMat = listS[[6]], phi0 = listAlpha[[6]]))
+#' OcondCDF(a, State = 3, y = 0.2)
+OcondCDF <- function(obj, State , y){
+  ifelse(OtimeSpent(obj = obj, State = State) <= y, 1, 0)
+}
+
+

@@ -1,5 +1,5 @@
 Package: phasetypeUtilsUcph
-Title: Phase-type Distribution Helpers
+Title: Phase-type Distribution Utilities
 Version: 0.6.0
 Authors@R: 
     person(given = "Niels",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "krarup.niels@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Utility functions for phase-type distributions. 
+Description: Utility functions for phase-type distributions and implementations of theorems in author's thesis. 
 License: ???
 Encoding: UTF-8
 LazyData: true

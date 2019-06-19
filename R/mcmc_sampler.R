@@ -7,7 +7,7 @@
 #' @param ForcePosExitRateStart Logical, should the first chain be forced to have positive exit rate at end state? Default is FALSE.
 #' @param TimePoint Time of absorption conditioned on.
 #' @param OFun The functional of the underlying process.
-#' @param ...
+#' @param ... additional arguments to be passed on to OFun.
 #'
 #' @return Estimated mean of function `Ofun` applied to the underlying process.
 #' @export
