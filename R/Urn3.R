@@ -57,7 +57,7 @@ Urn3 <- function(n, d, k){
     T_kn <- matrix(0, nrow = k, ncol = k)
     #fill super-diagonal with 1s
     if(k >= 2){
-      for(i in seq_along(k-1))
+      for(i in 1:(k-1))
         T_kn[i,i+1] <- 1
     }
 
