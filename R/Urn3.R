@@ -14,24 +14,24 @@ Urn3 <- function(n, d, k){
   #* Establish a new 'ArgCheck' object
   Check <- ArgumentCheck::newArgCheck()
 
-  #* Add an error if lists not equal length
+  #* Add an error for n , number of balls
   if ( n%%1 != 0 | n <= 0)
     ArgumentCheck::addError(
-      msg = "n must be integers",
+      msg = "n must be positive integers",
       argcheck = Check
     )
 
-  #* Add an error if lists not equal length
-  if ( d%%1 != 0 | d > n | d < 0)
+  #* Add an error for d, number of black balls
+  if ( d%%1 != 0 | d > n | d <= 0)
     ArgumentCheck::addError(
-      msg = "d must be integers, 0=<d<=n",
+      msg = "d must be integers, 0 < d <= n",
       argcheck = Check
     )
 
-  #* Add an error if lists not equal length
-  if ( k%%1 != 0 | k > d | k < 0)
+  #* Add an error for k, the draw of black ball
+  if ( k%%1 != 0 | k > d | k <= 0)
     ArgumentCheck::addError(
-      msg = "k must be integers, 0=< k <=n",
+      msg = "k must be integers, 0 =< k <= d",
       argcheck = Check
     )
 
@@ -50,6 +50,14 @@ Urn3 <- function(n, d, k){
   #start in state 1 , out of total state space
   pi_kn <- rep(0, (n-d+1)*k) #Initial of multidim n-process
   pi_kn[1] <- 1
+
+  #Special Case: n = d, all balls are black.
+  #Simply return k-matrix with 1's on superdiagonal.
+  if(n == d){
+    T_kn <- matrix(0, nrow = k, ncol = k)
+    return(list(T_kn = T_kn,
+                pi_kn = pi_kn))
+  }
 
 
   #T_(j:n) subtransition matrix
