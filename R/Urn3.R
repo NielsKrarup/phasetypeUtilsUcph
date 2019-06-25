@@ -55,6 +55,12 @@ Urn3 <- function(n, d, k){
   #Simply return k-matrix with 1's on superdiagonal.
   if(n == d){
     T_kn <- matrix(0, nrow = k, ncol = k)
+    #fill super-diagonal with 1s
+    if(k >= 2){
+      for(i in seq_along(k-1))
+        T_kn[i,i+1] <- 1
+    }
+
     return(list(T_kn = T_kn,
                 pi_kn = pi_kn))
   }
